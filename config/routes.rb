@@ -11,6 +11,8 @@ Rails.application.routes.draw do
   
   get  'contact', to: 'static_pages#contact'
   
+  get  'signup', to: 'users#new'
+  
   root 'static_pages#home'
   
 end
