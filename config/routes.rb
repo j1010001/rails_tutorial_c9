@@ -7,6 +7,6 @@ Rails.application.routes.draw do
 
   get 'static_pages/about'
   
-  root 'application#goodbye'
+  root 'static_pages#home'
   
 end
