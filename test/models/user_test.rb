@@ -6,7 +6,8 @@ class UserTest < ActiveSupport::TestCase
   #   Because @user is an instance variable, it’s automatically available 
   #   in all the tests, and we can test its validity using the valid? method
   def setup
-    @user = User.new(name: "Example User", email: "user@example.com")
+    @user = User.new(name: "Example User", email: "user@example.com",
+    password: "foobar", password_confirmation: "foobar")
   end
   
   test "should be valid" do
