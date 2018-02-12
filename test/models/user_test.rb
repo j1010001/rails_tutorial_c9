@@ -23,4 +23,12 @@ class UserTest < ActiveSupport::TestCase
     assert_not @user.valid?
   end
   
+  # test uniqueness of email addresses
+  # for uniqueness tests we actually need to put a record into the database.
+  test "email addresses should be unique" do
+    duplicate_user = @user.dup
+    @user.save
+    assert_not duplicate_user.valid?
+  end
+  
 end
